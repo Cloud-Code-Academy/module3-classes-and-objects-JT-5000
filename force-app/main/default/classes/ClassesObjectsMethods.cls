@@ -112,16 +112,27 @@ public with sharing class ClassesObjectsMethods {
      * @return A string consisting of only unique words from the input sentence.
      */
     public static String removeDuplicateWords(String sentence) {
-        // Split the sentence into words
+        // Split the sentence into words;
+        List<String> splitWordsFromSentenceList = sentence.split(' ');
 
-        // Create a set to store the unique words
+        // Create a set to store the unique words;
+        Set<String> uniqueWordsFromSentenceSet = new Set<String>();
 
-        // Add each word to the set
+        // Create a string to collect the unique words into a sentence;
+        String uniqueWordsSentence = '';
+        
+        // Adding the list to a set in order to remove duplicates;
+        uniqueWordsFromSentenceSet.addAll(splitWordsFromSentenceList);
 
-        // Join the unique words back into a sentence
+        // Loop over the set and reconstruct the sentence
+        for (String word : uniqueWordsFromSentenceSet) {
+            uniqueWordsSentence += (word + ' ');
+        }
 
-        // Return the sentence with unique words
-        return null; // Replace null with the variable you used to store the result
+        // Trimming whitespace before we return the value;
+        String trimmedSentenceString = uniqueWordsSentence.trim();
+
+        return trimmedSentenceString; 
     }
 
     /**
