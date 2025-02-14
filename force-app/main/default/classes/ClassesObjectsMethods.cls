@@ -72,15 +72,36 @@ public with sharing class ClassesObjectsMethods {
      * @return A list of boolean values indicating whether the string starts with 'Sales', ends with 'Force', or contains 'Awesome'.
      */
     public static List<Boolean> checkStringContent(String input) {
+        // Declare variables
+        String salesString = 'Sales';
+        String forceString = 'Force';
+        String awesomeString = 'Awesome';
+
         // Initialize a list to store the results
+        List<Boolean> stringConfirmationBooleans = new List<Boolean>();
         
         // Check if the string starts with 'Sales'
-        
+        if (input.startsWith(salesString)) {
+            stringConfirmationBooleans.add(true);
+        }else{
+            stringConfirmationBooleans.add(false);
+        }
+
         // Check if the string ends with 'Force'
-        
+        if (input.endsWith(forceString)) {
+            stringConfirmationBooleans.add(true);
+        }else{
+            stringConfirmationBooleans.add(false);
+        }
+
         // Check if the string contains 'Awesome'
+        if (input.contains(awesomeString)) {
+            stringConfirmationBooleans.add(true);
+        }else{
+            stringConfirmationBooleans.add(false);
+        }
         
-        return null; // Replace null with the variable you used to store the result
+        return stringConfirmationBooleans; 
     }
 
     /**
