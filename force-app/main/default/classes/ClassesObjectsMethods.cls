@@ -216,9 +216,14 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer generateRandomNumber() {
         // Use Math class to generate number between 50 and 100
+        Double randomNumber = Math.random() * 100;
+
+        if (randomNumber < 50){
+            randomNumber += 50;
+        }
 
         // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+        return Integer.valueOf(randomNumber); // Replace null with the variable you used to store the result
     }
 
     /**
