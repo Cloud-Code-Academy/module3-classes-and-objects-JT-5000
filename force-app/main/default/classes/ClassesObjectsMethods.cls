@@ -144,17 +144,20 @@ public with sharing class ClassesObjectsMethods {
      * @return The number of vowels in the string.
      */
     public static Integer countVowels(String str) {
-        // Initialize the result Integer
+        String vowels = 'aeiou';
+        Integer vowelCounter = 0;
 
-        /*
-        for () {
-            // get individual characters from the string - hint use substring or split
-            // check if the character is a vowel
-            // if it is a vowel, increment the result Integer
+        // Collecting each letter into a list of letters;
+        List<String> individualLettersList = str.split('');
+
+        // Loop over each letter in the list and see if it's a vowel;
+        for (String singleLetter : individualLettersList) {
+            if (vowels.containsAny(singleLetter)) {
+                // If it's a vowel, increment our counter;
+                vowelCounter++;
+            }
         }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        return vowelCounter; 
     }
 
     /**
