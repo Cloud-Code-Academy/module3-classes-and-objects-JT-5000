@@ -495,6 +495,7 @@ public with sharing class ClassesObjectsMethods {
      * @return The Person object of the older person.
      */
     public static Person getOlderPerson(Person person1, Person person2) {
+        // The ternary can quickly allow us to return the older person;
         return person1.age > person2.age ? person1 : person2;
     }
 }
