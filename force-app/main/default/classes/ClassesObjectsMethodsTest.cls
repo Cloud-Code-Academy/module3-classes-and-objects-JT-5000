@@ -212,7 +212,7 @@ public with sharing class ClassesObjectsMethodsTest {
         Assert.areEqual(expectedResult, result, 'The method should return the correct book details');
     }
 
-    /* //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+    //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testGenerateBookList() {
         // Create a Book instance
@@ -238,58 +238,58 @@ public with sharing class ClassesObjectsMethodsTest {
         Assert.areEqual(352, result[0].pages, 'Pages of book at index 0 should match');
         Assert.areEqual(256, result[1].pages, 'Pages of book at index 1 should match');
     }
-    */
 
-    /* //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
-    @IsTest
-    static void testPersonClass() {
-        // Initialize a new Person instance
-        ClassesObjectsMethods.Person testPerson = new ClassesObjectsMethods.Person('John Doe', 25);
 
-        // Check that the name and age were set correctly
-        Assert.areEqual('John Doe', testPerson.getName(), 'The name should be correctly set');
-        Assert.areEqual(25, testPerson.getAge(), 'The age should be correctly set');
+//UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+    // @IsTest
+    // static void testPersonClass() {
+    //     // Initialize a new Person instance
+    //     ClassesObjectsMethods.Person testPerson = new ClassesObjectsMethods.Person('John Doe', 25);
 
-        // Call the introduceYourself method and verify the result
-        String intro = testPerson.introduceYourself();
-        Assert.areEqual('Hello, my name is John Doe and I am 25 years old.', intro, 'The introduction should be correctly formatted');
+    //     // Check that the name and age were set correctly
+    //     Assert.areEqual('John Doe', testPerson.getName(), 'The name should be correctly set');
+    //     Assert.areEqual(25, testPerson.getAge(), 'The age should be correctly set');
 
-        // Test the setter methods
-        testPerson.setName('Jane Doe');
-        testPerson.setAge(30);
+    //     // Call the introduceYourself method and verify the result
+    //     String intro = testPerson.introduceYourself();
+    //     Assert.areEqual('Hello, my name is John Doe and I am 25 years old.', intro, 'The introduction should be correctly formatted');
 
-        // Verify that the name and age have been updated correctly
-        Assert.areEqual('Jane Doe', testPerson.getName(), 'The name should be correctly updated');
-        Assert.areEqual(30, testPerson.getAge(), 'The age should be correctly updated');
+    //     // Test the setter methods
+    //     testPerson.setName('Jane Doe');
+    //     testPerson.setAge(30);
 
-        // Call the introduceYourself method again and verify the result
-        intro = testPerson.introduceYourself();
-        Assert.areEqual('Hello, my name is Jane Doe and I am 30 years old.', intro, 'The updated introduction should be correctly formatted');
-    }
-    */
+    //     // Verify that the name and age have been updated correctly
+    //     Assert.areEqual('Jane Doe', testPerson.getName(), 'The name should be correctly updated');
+    //     Assert.areEqual(30, testPerson.getAge(), 'The age should be correctly updated');
 
-    @IsTest
-    static void testPersonDetails() {
-        // Call the personDetails method and capture the return value
-        List<String> resultDetails = ClassesObjectsMethods.personDetails();
+    //     // Call the introduceYourself method again and verify the result
+    //     intro = testPerson.introduceYourself();
+    //     Assert.areEqual('Hello, my name is Jane Doe and I am 30 years old.', intro, 'The updated introduction should be correctly formatted');
+    // }
 
-        // Check that the returned List has 3 elements
-        Assert.areEqual(3, resultDetails.size(), 'The returned List should contain 3 elements');
 
-        // Define the expected values for comparison
-        String expectedIntro = 'Hello, my name is John Doe and I am 28 years old.';
-        String expectedName = 'John Doe';
-        String expectedAge = '28';
+    // @IsTest
+    // static void testPersonDetails() {
+    //     // Call the personDetails method and capture the return value
+    //     List<String> resultDetails = ClassesObjectsMethods.personDetails();
 
-        // Check that the first element in the returned List is the expected introduction
-        Assert.areEqual(expectedIntro, resultDetails.get(0), 'The first element should be the expected introduction');
+    //     // Check that the returned List has 3 elements
+    //     Assert.areEqual(3, resultDetails.size(), 'The returned List should contain 3 elements');
 
-        // Check that the second element in the returned List is the expected name
-        Assert.areEqual(expectedName, resultDetails.get(1), 'The second element should be the expected name');
+    //     // Define the expected values for comparison
+    //     String expectedIntro = 'Hello, my name is John Doe and I am 28 years old.';
+    //     String expectedName = 'John Doe';
+    //     String expectedAge = '28';
 
-        // Check that the third element in the returned List is the expected age
-        Assert.areEqual(expectedAge, resultDetails.get(2), 'The third element should be the expected age');
-    }
+    //     // Check that the first element in the returned List is the expected introduction
+    //     Assert.areEqual(expectedIntro, resultDetails.get(0), 'The first element should be the expected introduction');
+
+    //     // Check that the second element in the returned List is the expected name
+    //     Assert.areEqual(expectedName, resultDetails.get(1), 'The second element should be the expected name');
+
+    //     // Check that the third element in the returned List is the expected age
+    //     Assert.areEqual(expectedAge, resultDetails.get(2), 'The third element should be the expected age');
+    // }
 
     /* UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest

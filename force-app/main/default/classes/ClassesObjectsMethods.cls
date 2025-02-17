@@ -304,13 +304,10 @@ public with sharing class ClassesObjectsMethods {
      * where you need to manipulate and manage book information.
      */
     public class Book {
-        // Declare three public instance variables - title, author, pages
-        // title
-        // author
-        // pages
+
         public String title;
         public String author;
-        //public Integer pages;
+        public Integer pages;
     
         // Book constructor to initialize the title and author
         public Book(String title, String author) {
@@ -357,18 +354,22 @@ public with sharing class ClassesObjectsMethods {
      */
     public static List<Book> generateBookList(Book myBook1) {
         // Create a list of books
+        List<Book> listOfBooks = new List<Book>();
 
         // Update the title and author of myBook1
+        Book newBook1 = new Book('Harry Potter and the Chamber of Secrets', 'J.K. Rowling');
+        newBook1.pages = 352;
 
-        // Update the pages for myBook1 to 352
 
         // Create a new Book object with title "A Brief History of Time" and author "Stephen Hawking"
-
-        // Update the pages for A Brief History of Time to 256
+        Book newBook2 = new Book('A Brief History of Time', 'Stephen Hawking'); 
+        newbook2.pages = 256;
 
         // Add the book to the list
+        listOfBooks.add(newBook1);
+        listOfBooks.add(newBook2);
         
-        return null; // Replace null with the variable you used to store the result      
+        return listOfBooks; 
     }
 
 
@@ -381,20 +382,42 @@ public with sharing class ClassesObjectsMethods {
      */
     public class Person {
         // Declare private two instance variables - (TEXT) name and (Number) age
+        private String name;
+        private Integer age;
         
         // Constructor to initialize the name and age
+        public Person(String name, Integer age){
+            this.name = name;
+            this.age = age;
+        }
     
-        // Method introduceYourself that returns the details of the person        
-        // Return a string in the format "Hello, my name is <name> and I am <age> years old."
-        // For example, introduceYourself() should return a string like "Hello, my name is John Doe and I am 28 years old."
+        // Method introduceYourself that returns the details of the person     
+        public String introduceYourself(){
+            String introductionString = 'Hello, my name is ' + this.name + ' and I am ' + this.age + ' years old.';
+
+            // Return a string in the format "Hello, my name is <name> and I am <age> years old."
+            return introductionString;
+        }   
 
         // Getter method that returns the name of the person
+        public String getName(){
+            return this.name;
+        }
 
         // Getter method that returns the age of the person
+        public Integer getAge(){
+            return this.age;
+        }
 
         // Setter method that sets the name of the person
+        public void setName(String name){
+            this.name = name;
+        }
 
         // Setter method that sets the age of the person
+        public void setAge(Integer age){
+            this.age = age;
+        }
     }
 
     /**
