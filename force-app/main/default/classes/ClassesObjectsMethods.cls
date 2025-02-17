@@ -393,7 +393,7 @@ public with sharing class ClassesObjectsMethods {
     
         // Method introduceYourself that returns the details of the person     
         public String introduceYourself(){
-            String introductionString = 'Hello, my name is ' + this.name + ' and I am ' + this.age + ' years old.';
+            String introductionString = 'Hello, my name is ' + name + ' and I am ' + age + ' years old.';
 
             // Return a string in the format "Hello, my name is <name> and I am <age> years old."
             return introductionString;
